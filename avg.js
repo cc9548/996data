@@ -4,7 +4,7 @@ function avg(score){
         sum+=score[i];
     }
     if(score.length>0){
-        average=sum/(score.length-1);
+        average=sum/score.length;
         return average;
     }
 }
