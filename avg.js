@@ -3,11 +3,11 @@ function avg(score){
     for(var i=1; i<score.length; i++){
         sum+=score[i];
     }
-    if(score.length>0){
+    if(score.length>0)
         average=sum/score.length;
         return average;
-    }
+    
 }
 //test
-var Score=[10,20,30,55,45,69];
+var Score=[10,20,30,55,45,60];
 console. log(Score .toString="average is "+avg(Score));
