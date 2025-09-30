@@ -7,4 +7,5 @@ function sun(n){
     return result;
 }
 //test
-console.log("1+2+...+"+n+"="+sun(10));
+var n=10;
+console.log("1+2+...+"+n+"="+sun(n));
