@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\factorial.js"
+            "program": "${workspaceFolder}\\fibonacci.js"
         }
     ]
 }
