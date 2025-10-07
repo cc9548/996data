@@ -12,6 +12,7 @@ function sum2(n){
                 else
                 sum += i;//odd
             }
+        return sum;
         }
 }
 //test 
