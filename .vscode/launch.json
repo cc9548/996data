@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\sum_v2.js"
+            "program": "${workspaceFolder}\\factorial.js"
         }
     ]
 }
