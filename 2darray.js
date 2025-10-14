@@ -10,6 +10,11 @@ function avg(score){
     }
     return (score.length>0)?sum/score.length:0;
 }
-console.log("student1 average:"+avg(Score[0]));
-console.log("student2 average:"+avg(Score[1]));
-console.log("student3 average:"+avg(Score[2]));
+var Student=[
+    {"name":"John","grade":2,"score":[70,80,90,60,80]},
+    {"name":"Mary","grade":2,"score":[80,90,70,75,85]},
+    {"name":"Tom","grade":3,"score":[85,85,80,90,80]}
+]
+console.log("student1 name and average:"+avg(Student[0].score));
+console.log("student2 name and average:"+avg(Score[1].score));
+console.log("student3 name and average:"+avg(Student[2].score));

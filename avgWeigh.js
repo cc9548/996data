@@ -14,6 +14,6 @@ const num=5;
 //input
 var readline = require('readline-sync');
 for (let i=0;i<num;i++){
-    Score[i]=parseFloat(readline.question("input"+(i+1)+"'s score?"));
+    Score[i]=readline.question("input"+(i+1)+"'s score?");
 }
 console.log(Score.toString()+"average:"+avgWeight(Score,Weight));
