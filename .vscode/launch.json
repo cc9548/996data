@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\ary1.js"
+            "program": "${workspaceFolder}\\avgWeigh.js"
         }
     ]
 }
