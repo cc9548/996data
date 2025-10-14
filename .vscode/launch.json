@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\arryDuplicate.js"
+            "program": "${workspaceFolder}\\2darray.js"
         }
     ]
 }
