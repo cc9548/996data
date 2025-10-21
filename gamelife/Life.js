@@ -12,4 +12,3 @@ class Life {
 
 var myGame1=new Life(10,10);
 var myGame2=new Life(5,5);
-console.log (myGame1.grid);
