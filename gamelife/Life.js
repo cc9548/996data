@@ -8,7 +8,7 @@ class Life {
       //dynamic 2d array
      for (let r =0;r<_row;r++){
       this.grid.push([]);
-      for (let c=0;c<_coll;c++){
+      for (let c=0;c<_col;c++){
         this.grid[r].push(DEAD);
       }
      }
@@ -33,7 +33,7 @@ class Life {
     count += this.getStatusAt(_row+1,_col+1);//right bottom
     return count;
   }
-    update=function(nLive){
+    update=function(){
       //duplicate grid
       var nextGrid= JSON.parse(JSON.stringify(this.grid));
       for (let r=0;r< this.row;r++)
@@ -71,4 +71,4 @@ var myGame1=new Life(10,10);
 var myGame2=new Life(5,5);
 myGame1.init(10);
 myGame1.update()
-console.log(myGame.grid);
+console.log(myGame1.grid)
