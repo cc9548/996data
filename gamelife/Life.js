@@ -18,7 +18,7 @@ class Life {
     if (_row<0 || _col<0 || _row>=this.row || _col>=this.col){
       return DEAD;
     }else{
-      this.grid[_row][_col];
+      return this.grid[_row][_col];
     }
   }
   neighborCount=function(_row,_col){
@@ -33,7 +33,42 @@ class Life {
     count += this.getStatusAt(_row+1,_col+1);//right bottom
     return count;
   }
+    update=function(nLive){
+      //duplicate grid
+      var nextGrid= JSON.parse(JSON.stringify(this.grid));
+      for (let r=0;r< this.row;r++)
+      {
+        for(let c=0;c< this.col;c++){
+          var nCount = this.neighborCount(r,c);
+          //update
+          //ex
+          if (this.grid[r][c]==LIVE && (nCount <2 || nCount>3) ){
+            nextGrid[r][c]=DEAD;
+          }
+          if (this.grid[r][c]== DEAD && nCount==3){
+            nextGrid[r][c]=LIVE;
+          }
+        }
+      }
+      this.grid=nextGrid;
+      //garbage collection
+    }
+    //ex
+    init = function(nLive){
+      var randCount=nLive;
+      while(randCount>0){
+        var r=Math.floor(Math.random()*this.row);
+        var c=Math.floor(Math.random()*this.col);
+        if(this.grid[r][c]=DEAD){
+          this.grid[r][c]=LIVE;
+          randCount--;
+        }
+      }
+    }
 }
 
 var myGame1=new Life(10,10);
 var myGame2=new Life(5,5);
+myGame1.init(10);
+myGame1.update()
+console.log(myGame.grid);
