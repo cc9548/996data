@@ -114,11 +114,15 @@ class Board{
 
 // }
 
-var myGame1 = new Life(20,20)
+var myGame1 = new Life(20, 20)
 myGame1.init(1);
-var myBoard = new Board (myGame1,"board");
+var myBoard = new Board(myGame1,"board");
+myBoard.draw();
+
 function toNext(){
-    myGame1.update();
-    myBoard.draw();
+   myGame1.update();
+   myBoard.draw(); 
 }
+var myGame2 = new Life(5, 5)
+myGame1.update()
 console.log(myGame1.grid)
