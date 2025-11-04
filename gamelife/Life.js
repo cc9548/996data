@@ -55,14 +55,14 @@ class Life{
 
     }
 }
-    //exercise
-    //預設集
-    var LifeSet = [
+//exercise
+//預設集
+var LifeSet = [
     { name: "Pentomino", maxR: 2, maxC: 2, set: [{ r: 1, c: 0 }, { r: 2, c: 0 }, { r: 0, c: 1 }, { r: 1, c: 1 }, { r: 1, c: 2 }] },
     { name: "Tumbler", maxR: 5, maxC: 5, set: [{ r: 1, c: 0 }, { r: 4, c: 0 }, { r: 1, c: 1 }, { r: 2, c: 1 }, { r: 3, c: 1 }, { r: 4, c: 1 }, { r: 0, c: 2 }, { r: 5, c: 2 }, { r: 0, c: 3 }, { r: 2, c: 3 }, { r: 3, c: 3 }, { r: 5, c: 3 }, { r: 0, c: 4 }, { r: 5, c: 4 }, { r: 1, c: 5 }, { r: 2, c: 5 }, { r: 3, c: 5 }, { r: 4, c: 5 }] },
     { name: "Cheshire Cat", maxR: 6, maxC: 5, set: [{ r: 1, c: 0 }, { r: 2, c: 0 }, { r: 4, c: 0 }, { r: 5, c: 0 }, { r: 1, c: 1 }, { r: 2, c: 1 }, { r: 4, c: 1 }, { r: 5, c: 1 }, { r: 2, c: 2 }, { r: 4, c: 2 }, { r: 0, c: 3 }, { r: 2, c: 3 }, { r: 4, c: 3 }, { r: 6, c: 3 }, { r: 0, c: 4 }, { r: 2, c: 4 }, { r: 4, c: 4 }, { r: 6, c: 4 }, { r: 0, c: 5 }, { r: 1, c: 5 }, { r: 5, c: 5 }, { r: 6, c: 5 }] }
-    ]
-     LifeSet.prototype.init=function(type){
+]
+Life.prototype.init=function(type){
 
     if (type > LifeSet.length || type < 0)
         return;
@@ -78,7 +78,7 @@ class Life{
 class Board{
     constructor(_game,_canvas){
         this.game=_game;
-        this.canvas= document.getElementById(_canvas).getCotext("2d");
+        this.canvas= document.getElementById(_canvas).getContext("2d");
         var wSize= document.getElementById(_canvas).width/this.game.col;
         var hSize= document.getElementById(_canvas).height/this.game.row;
         this.size = Math.min(wSize,hSize)
