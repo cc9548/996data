@@ -22,7 +22,7 @@ class Point{
 var start=new Point(1,1);
 var end = new Point(8,10);
 var Stack=[];
-
+var Direction = [[-1,0],[0,-1],[1,0],[0,1]].sort((a,b)=>{return Math.random()-0.5});
 var CP=start;//currentPosition
 do{
     MAZE[CP.row][CP.col]=2;
@@ -32,7 +32,8 @@ do{
         Stack.push(CP);
         CP = new Point(CP.row-1,CP.col);
     }else if(MAZE[CP.row][CP.col-1]==0){ //left
-
+        Stack.push(CP);
+        CP = new Point(CP.row,CP.col-1);
     } 
     else if (MAZE[CP.row + 1][CP.col] == 0) { // 下
         Stack.push(CP);
@@ -53,3 +54,6 @@ do{
     }
 //}while(!(CP.row==end.row && CP.col==end.col));
 }while(CP.row!=end.row || CP.col!=end.col);
+ if (Stack.length){
+    
+ }
