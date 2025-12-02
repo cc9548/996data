@@ -69,15 +69,6 @@ function drawBoard(){
     var size=Math.floor(Math.min(canvas.canvas.height/MAZE.length, canvas.canvas.width/MAZE[0].length));
     for (let row = 0; row < MAZE.length; row++) {
         for (let col = 0; col < MAZE[0].length; col++) {
-            // if(MAZE[row][col]==0){
-
-            // }else if(MAZE[row][col]==1){
-
-            // }else if(MAZE[row][col]==2){
-
-            // }else{
-
-            // }
             switch(MAZE[row][col]){
                 case 0:
                     canvas.fillStyle = "#ffffff";
